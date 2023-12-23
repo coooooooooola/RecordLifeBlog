@@ -1,0 +1,17 @@
+{
+  "name": "swtywang's blog",
+  "short_name": "swtywang",
+  "start_url": "https://www.baidu.com/",
+  "display": "standalone",
+  "background_color": "#fef4eb",
+  "description": "xxxxxxx",
+  "orientation": "portrait-primary",
+  "theme_color": "#fef4eb",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ]
+}

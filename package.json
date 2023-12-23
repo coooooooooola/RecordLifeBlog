@@ -1,11 +1,11 @@
 {
-  "name": "myBlog",
+  "name": "Resource",
   "version": "1.0.0",
   "author": "reco_luan",
   "scripts": {
     "start": "SET NODE_OPTIONS=--openssl-legacy-provider && yarn dev",
-    "dev": "vuepress dev MyBlog/. --open --host \"localhost\"",
-    "build": "vuepress build MyBlog/."
+    "dev": "vuepress dev Resource/. --open --host \"localhost\"",
+    "build": "vuepress build Resource/."
   },
   "devDependencies": {
     "@vuepress-reco/vuepress-plugin-kan-ban-niang": "^1.0.5",
@@ -25,7 +25,9 @@
   "dependencies": {
     "@vue/compiler-dom": "^3.2.45",
     "@vuepress-reco/vuepress-plugin-bgm-player": "^1.1.4",
+    "async-validator": "^1.11.5",
     "better-scroll": "^2.4.2",
+    "element-ui": "^2.15.14",
     "typed.js": "^2.0.12",
     "vuepress-plugin-img-lazy": "^1.0.4",
     "vuepress-plugin-nuggets-style-copy": "^1.0.3"
