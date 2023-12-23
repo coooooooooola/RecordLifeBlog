@@ -77,6 +77,13 @@ module.exports = (options, ctx) => ({
             path: '/galleryDetail/',
             layout: 'GalleryDetail',
             scopeLayout: 'GalleryDetail'
+          },
+                    {
+            id: 'bookmark',
+            keys: ['bookmark'],
+            path: '/bookmark/',
+            layout: 'BookMark',
+            scopeLayout: 'BookMark'
           }
         ]
       }

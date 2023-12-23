@@ -77,6 +77,11 @@ module.exports = {
         text: 'Gallery',
         icon: 'reco-account',
         link: '/gallery/'
+      },
+             {
+        text: 'Bookmark',
+        icon: 'reco-account',
+        link: '/bookmark/'
       }
     ],
     // 左侧侧边栏配置
