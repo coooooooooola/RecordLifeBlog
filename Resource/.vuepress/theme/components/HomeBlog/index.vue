@@ -2,30 +2,6 @@
 <template>
   <div class="home-blog">
     <div class="hero" :style="{ ...bgImageStyle }">
-      <!-- heroImage区域，包含了heroImage、heroText和tagline -->
-      <!-- <div class="heroImageContainer">
-        <ModuleTransition>
-          <img
-            class="hero-img"
-            v-if="recoShowModule && $frontmatter.heroImage"
-            :style="heroImageStyle || {}"
-            :src="$withBase($frontmatter.heroImage)"
-            alt="hero"
-          />
-        </ModuleTransition>
-
-        <ModuleTransition delay="0.04">
-          <h1 v-if="recoShowModule && $frontmatter.heroText !== null">
-            {{ $frontmatter.heroText || $title || '古之立大事者，不惟有超世之才，亦必有坚忍不拔之志。' }}
-          </h1>
-        </ModuleTransition>
-
-        <ModuleTransition delay="0.08">
-          <p v-if="recoShowModule && $frontmatter.tagline !== null" class="description">
-            {{ $frontmatter.tagline || $description || 'Welcome to your own blog site!!' }}
-          </p>
-        </ModuleTransition>
-      </div> -->
       <!-- 自定义封面格言区域 -->
       <div class="mottosContainer" :style="mottosStyle || {}">
         <ModuleTransition delay="0.04">
@@ -54,13 +30,6 @@
             }}
           </p>
         </ModuleTransition>
-        <!-- 动态下拉 -->
-        <!-- <a
-          href="#anchor"
-          class="anchorContainer scroll-down bounce-enter-active down-arrow"
-        >
-          <img class="anchorImg" :src="anchorImageUrl" alt="anchor" />
-        </a> -->
       </div>
       <!-- 气泡效果结构 -->
       <div id="bubbles" class="bubblesContainer"></div>
@@ -157,28 +126,6 @@ export default defineComponent({
     // 设置封面格言样式，并暴露出去给config.js来让用户设置
     const mottosStyle = computed(() => instance.$themeConfig.mottosStyle || {})
 
-    // 原先的背景封面图片
-    // const bgImageStyle = computed(() => {
-    //   // const url = instance.$frontmatter.bgImage
-    //   //   ? instance.$withBase(instance.$frontmatter.bgImage)
-    //   //   : require('../../images/home-bg.jpg')  //这里设置默认封面图
-    //   const url = instance.$themeConfig.bgImage
-    //     ? instance.$withBase(instance.$themeConfig.bgImage)
-    //     : require("../../images/bg.svg"); //如果用户没有设置背景图，设置主题默认封面图
-
-    //   const initBgImageStyle = {
-    //     textAlign: "center",
-    //     overflow: "hidden",
-    //     background: `url(${url}) center/cover no-repeat `,
-    //   };
-    //   // 获取用户自定义的样式，优先更高
-    //   const { bgImageStyle } = instance.$frontmatter;
-
-    //   return bgImageStyle
-    //     ? { ...initBgImageStyle, ...bgImageStyle }
-    //     : initBgImageStyle;
-    // });
-
     // 自定义修改的背景图片设置, 随机产生一张图片
     const bgImageStyle = computed(() => {
       const url = instance.$themeConfig.heroImages[
@@ -219,11 +166,6 @@ export default defineComponent({
     })
 
     onMounted(() => {
-      // 添加气泡效果的组件
-      // import('vue-canvas-effect/src/components/bubbles').then(module =>{
-      //   this.bubbles = module.default
-      // })
-
       state.heroHeight = document.querySelector('.hero').clientHeight
       state.recoShow = true
       // 气泡效果

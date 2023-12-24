@@ -8,9 +8,9 @@ module.exports = [
   [
     'vuepress-plugin-dynamic-title',
     {
-      showIcon: '/favicon.ico',
+      showIcon: '/avatar.jpg',
       showText: '',
-      hideIcon: '/failure.ico',
+      hideIcon: '/avatar.jpg',
       hideText: '',
       recoverTime: 2000
     }

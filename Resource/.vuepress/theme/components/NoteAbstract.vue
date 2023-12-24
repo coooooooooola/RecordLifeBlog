@@ -2,11 +2,12 @@
   <div class="abstract-wrapper">
     <!-- 遍历文章并展示博客文章 -->
     <NoteAbstractItem
-      v-for="item in currentPageData"
+      v-for="(item, i) in currentPageData"
       :key="item.path"
       :item="item"
       :currentPage="currentPage"
       :currentTag="currentTag"
+      :class="getClass(i)"
     />
     <pagation
       class="pagation"
@@ -20,7 +21,7 @@
 <script>
 import { defineComponent, ref, toRefs, computed, onMounted } from 'vue-demi'
 import pagination from '@theme/mixins/pagination'
-import NoteAbstractItem from './NoteAbstractItem'
+import NoteAbstractItem from './NoteAbstractItemNew'
 import { useInstance } from '@theme/helpers/composable'
 
 export default defineComponent({
@@ -58,6 +59,13 @@ export default defineComponent({
   watch: {
     $route() {
       this.currentPage = this._getStoragePage() || 1
+    }
+  },
+  methods: {
+    getClass(i) {
+      if (i % 2 == 1) {
+        return 'abstract-item-left'
+      }
     }
   }
 })

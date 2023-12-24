@@ -92,6 +92,6 @@ export default defineComponent({
       color $accentColor
 @media (max-width: $MQMobile)
   .tags
-    display block
+    display inline
     margin-left 0 !important
 </style>

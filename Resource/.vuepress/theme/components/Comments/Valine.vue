@@ -82,8 +82,6 @@ export default {
 
       new Valine(valineOptions)
     }
-    // 随机获取一种背景颜色
-    // getOneBgc
   },
   watch: {
     $route(to, from) {
