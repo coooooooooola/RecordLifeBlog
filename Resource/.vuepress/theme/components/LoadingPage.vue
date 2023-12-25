@@ -10,7 +10,7 @@
       </p>
     </div>
     <div class="loadingImageContainer">
-      <img src="../images/pikachu-running.gif" />
+      <img src="../images/loading.gif" />
     </div>
   </div>
 </template>

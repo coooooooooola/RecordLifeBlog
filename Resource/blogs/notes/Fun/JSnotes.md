@@ -2,9 +2,9 @@
 title: JS的难点重点
 date: 2021-2-12
 tags:
- - JS
+ - FunTag
 categories:
- - JS
+ - Fun
 desc: aaaaa
 ---
 

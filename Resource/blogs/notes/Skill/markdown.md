@@ -3,6 +3,7 @@ title: markdown用法
 date: 2020-05-28
 tags:
 - plugins
+categories: Skill
 ---
 
 ::: tip 摘要

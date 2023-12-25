@@ -16,12 +16,106 @@
 
         <ModuleTransition delay="0.08" duration="0.5">
           <div class="introContainer">
-            <div class="introContent">
-              <!-- typed展示输出的内容 -->
-              <span id="typed1" class="type"></span>
-              <span id="typed2" class="type"></span>
-              <span id="typed3" class="type"></span>
-              <span id="typed4" class="type"></span>
+            <!-- typed展示输出的内容 -->
+            <span id="typed1" class="type fzzj"></span>
+
+            <div class="introContent Kalam">
+              <h2 style="border-left: solid 3px yellow; padding-left: 10px">
+                自画像
+              </h2>
+              <span style="padding-left: 5px">
+                <span
+                  style="background-color: rgb(31, 157, 163); display: inline"
+                  >经历</span
+                >：985小硕，前百度/字节工程师，现在国企躺不平。</span
+              >
+              <span style="padding-left: 5px">
+                <span
+                  style="background-color: rgb(31, 157, 163); display: inline"
+                  >爱好</span
+                >：电影 / 羽毛球 / DOTA2云玩家 / 王者荣耀（又菜又苟）/ 旅行 /
+                美食。
+              </span>
+              <span style="padding-left: 5px">
+                <span
+                  style="background-color: rgb(31, 157, 163); display: inline"
+                  >性格</span
+                >：ISTJ（有点儿准），还有一点儿内向+社恐，只和很熟悉的人话比较多，很不喜欢无效社交，享受独处时光
+              </span>
+              <h2 style="border-left: solid 3px yellow; padding-left: 10px">
+                建站
+              </h2>
+              <span style="padding-left: 5px">
+                <span
+                  style="background-color: rgb(31, 157, 163); display: inline"
+                  >目的</span
+                >：一直以来都很想打造属于自己的桃花源，在纷繁复杂的乱世中寻得一片宁静。在这里我可以不受任何打扰，随心所欲地记录生活、发表感悟。
+              </span>
+              <span style="padding-left: 5px">
+                <span
+                  style="background-color: rgb(31, 157, 163); display: inline"
+                  >失败经历</span
+                >：2019年的时候基于vue+springboot+flask完成了第一个博客+管理后台的开发，但由于过于注重代码实现而忽视了记录生活的初衷，维护了几个月就无疾而终。
+              </span>
+              <span style="padding-left: 5px">
+                <span
+                  style="background-color: rgb(31, 157, 163); display: inline"
+                  >内容为王</span
+                >：2023年12月逛知乎刷到了个人博客的话题，再加上在国企工作不太忙，感觉又可以重新出发。吸取了上次失败教训，这次只留给自己二周的时间调研+二次开发，一切以内容为主。
+              </span>
+              <span style="padding-left: 5px">
+                <span
+                  style="background-color: rgb(31, 157, 163); display: inline"
+                  >二次开发</span
+                >：本次主要使用了vuepress-theme-reco主题，在<a
+                  href="https://github.com/mumu-pika/MyBlog_vuepress-theme-reco"
+                  >mumu-pika</a
+                >的基础上新增了书签、相册功能并做了样式调整，其他功能会在以后的使用过程中不断完善优化。
+              </span>
+
+              <h2 style="border-left: solid 3px yellow; padding-left: 10px">
+                已有功能
+              </h2>
+              <span style="padding-left: 5px">
+                <span
+                  style="background-color: rgb(31, 157, 163); display: inline"
+                  >首页</span
+                >：封面图、导航栏、文章列表、文章分类和tag数据，在config.js中的themeConfig配置
+              </span>
+              <span style="padding-left: 5px">
+                <span
+                  style="background-color: rgb(31, 157, 163); display: inline"
+                  >文章</span
+                >：文章存放在/Resource/blogs，支持按照分类、tag以及时间轴展示
+              </span>
+              <span style="padding-left: 5px">
+                <span
+                  style="background-color: rgb(31, 157, 163); display: inline"
+                  >相册</span
+                >：照片存放在/Resource/photots，支持分相册展示
+              </span>
+              <span style="padding-left: 5px">
+                <span
+                  style="background-color: rgb(31, 157, 163); display: inline"
+                  >书签</span
+                >：存放有用的、有意思的网址
+              </span>
+
+              <h2 style="border-left: solid 3px yellow; padding-left: 10px">
+                未来的功能
+              </h2>
+              <span style="padding-left: 5px">
+                <span
+                  style="background-color: rgb(31, 157, 163); display: inline"
+                  >说说</span
+                >：类似一条朋友圈，简短表达心情
+              </span>
+              <span style="padding-left: 5px">
+                <span
+                  style="background-color: rgb(31, 157, 163); display: inline"
+                  >密码</span
+                >：输入密码后才可进入某个页面
+              </span>
             </div>
           </div>
         </ModuleTransition>
@@ -46,45 +140,16 @@ export default {
     socials() {
       return this.$themeConfig.socials
     },
-    // typed函数使用 https://github.com/mumu-pika/typed.js
+    // typed函数使用
     typedString1() {
       return new Typed('#typed1', {
         // stringsElement: "#typed-strings",
-        strings: ['985小硕，前百度/字节工程师，现在国企躺不平'],
+        strings: ['此际浮华满天 未曾让我艳羡'],
         typeSpeed: 80, //设置打字的速度，单位为毫秒，数值越大，打字速度越慢
         startDelay: 0, // 设置开始打字前的延迟
-        showCursor: false //设置是否显示鼠标
+        showCursor: false, //设置是否显示鼠标
       })
     },
-    typedString2() {
-      return new Typed('#typed2', {
-        // stringsElement: "#typed-strings",
-        strings: ['虽然已经年过三十，仍然心智不全，还有一点社恐'],
-        typeSpeed: 80, //设置打字的速度，单位为毫秒，数值越大，打字速度越慢
-        startDelay: 5000, // 设置开始打字前的延迟
-        showCursor: false //设置是否显示鼠标
-      })
-    },
-    typedString3() {
-      return new Typed('#typed3', {
-        // stringsElement: "#typed-strings",
-        strings: ['本打算学好技术混口饭吃，却发现行走江湖技术越来越不值钱'],
-        typeSpeed: 100, //设置打字的速度，单位为毫秒，数值越大，打字速度越慢
-        startDelay: 10000, // 设置开始打字前的延迟
-        showCursor: false //设置是否显示鼠标
-      })
-    },
-    typedString4() {
-      return new Typed('#typed4', {
-        // stringsElement: "#typed-strings",
-        strings: [
-          '但是我不打算妥协，一条路走到黑吧，我的一生，注定是抗争的一生'
-        ],
-        typeSpeed: 100, //设置打字的速度，单位为毫秒，数值越大，打字速度越慢
-        startDelay: 14000, // 设置开始打字前的延迟
-        showCursor: false //设置是否显示鼠标
-      })
-    }
   },
 
   methods: {},
@@ -93,12 +158,9 @@ export default {
     // typingMagic();
     // 开始打字
     this.typedString1.start()
-    this.typedString2.start()
-    this.typedString3.start()
-    this.typedString4.start()
   },
 
-  watch: {}
+  watch: {},
 }
 </script>
 
@@ -137,55 +199,23 @@ export default {
     -webkit-transform: rotate(-360deg)
     /* Safari 和 Chrome */
     -o-transform: rotate(-360deg)
-  // 博主留言整体信息区域
-  .InfoContainer
-    display: flex
-    position relative
-    flex-direction: column
-    justify-content: center
-    align-content: center
-    width: 30rem
-    height: 20rem
-    padding: 2rem
-    margin: 1rem auto
-    border: 2px solid #ec7da1
-    border-radius: 1rem
-    // 这里设置伪元素是为了背景图片与内部的字体可以分别区分开透明度
-    &::before
-      content: ''
-      position: absolute
-      width: 100%
-      height: 100%
-      top: 0
-      left: 0
-      background-image: url("https://cdn.jsdelivr.net/gh/mumu-pika/MyBlogCDN/images/anime/pokemon.webp")
-      background-size: cover
-      background-repeat: no-repeat
-      // background-position: right
-      opacity: 0.5
-      z-index -1
-    .InfoContainer-textContainer
-      display block
-      height 10rem
-      // background-color red
-
-    // 展示的内容区域
-    #typed1, #typed2, #typed3, #typed4
-      display: inline-block
-      margin: 0.6rem auto
-      font-size: 1rem
-      font-weight: 600
-  // 友链留言
+  #typed1
+    display: inline-block
+    margin: 0.6rem auto
+    font-size: 2rem
+    font-weight: 600
   .introContainer
     display block
     width 50%
     margin 0 auto
     border 2px groove var(--box-shadow-hover)
     .introContent
+      margin-top:30px
       display flex
       flex-direction column
       align-items: flex-start
       flex-flow: word-wrap
+      text-align: left
       padding 1rem
       background-color var(--background-color)
       box-shadow: var(--box-shadow-hover)

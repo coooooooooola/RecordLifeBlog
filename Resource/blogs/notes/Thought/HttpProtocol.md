@@ -2,9 +2,9 @@
 title: HTTP协议
 date: 2021-6-22
 tags:
- - HTTP
+ - Thought
 categories:
- - HTTP
+ - Thought
 ---
 
 

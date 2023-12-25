@@ -162,7 +162,7 @@ export default defineComponent({
     const anchorImageUrl = computed(() => {
       return instance.$themeConfig.anchorImage
         ? instance.$withBase(instance.$themeConfig.anchorImage)
-        : require('../../images/pika.gif') //如果用户没有设置，则显示默认动态图片
+        : require('../../images/loading.gif') //如果用户没有设置，则显示默认动态图片
     })
 
     onMounted(() => {

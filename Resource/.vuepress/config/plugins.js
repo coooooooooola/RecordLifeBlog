@@ -1,20 +1,6 @@
 // 这里封装博客所需要用到的插件
 
 module.exports = [
-  //为博客文章自动随机添加名人名言或其他，可自定义样式和内容的插件。 https://github.com/zpj80231/vuepress-plugin-boxx
-  ['vuepress-plugin-boxx'],
-
-  // 添加动态标题的插件  https://github.com/moefyit/vuepress-plugin-dynamic-title
-  [
-    'vuepress-plugin-dynamic-title',
-    {
-      showIcon: '/avatar.jpg',
-      showText: '',
-      hideIcon: '/avatar.jpg',
-      hideText: '',
-      recoverTime: 2000
-    }
-  ],
 
   //光标效果的插件 https://github.com/moefyit/vuepress-plugin-cursor-effects
   [

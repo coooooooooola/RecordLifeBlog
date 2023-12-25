@@ -59,20 +59,11 @@ module.exports = {
         icon: 'reco-date'
       },
       {
-        text: 'Docs',
+        text: 'tech',
         icon: 'reco-message',
-        items: [
-          {
-            text: '记事本',
-            link: '/docs/'
-          }
-        ]
+        link: 'https://swtywang.gitbook.io/tech/'
       },
-      {
-        text: 'About',
-        icon: 'reco-account',
-        link: '/about/'
-      },
+      
            {
         text: 'Gallery',
         icon: 'reco-account',
@@ -82,12 +73,13 @@ module.exports = {
         text: 'Bookmark',
         icon: 'reco-account',
         link: '/bookmark/'
-      }
+      },
+      {
+        text: 'About',
+        icon: 'reco-account',
+        link: '/about/'
+      },
     ],
-    // 左侧侧边栏配置
-    sidebar: {
-      '/docs/': ['', 'theme', 'markdown', 'dailymotto']
-    },
     // 右侧侧边栏全局开启
     subSidebar: 'auto', //在所有页面中启用自动生成子侧边栏，原 sidebar 仍然兼容
     // 博客配置
@@ -120,7 +112,7 @@ module.exports = {
 
     // 其他部分
     type: 'blog', // 设置好网站首页，会显示HomeBlog.vue。如果注释掉，会显示Home.vue组件。
-    anchorImage: './images/pika.gif', //触发下拉图片设置
+    anchorImage: './images/loading.gif', //触发下拉图片设置
     logo: '/avatar.jpg', //导航栏左侧logo
     search: true, //顶部搜索栏，true表示开启搜索
     searchMaxSuggestions: 10, //输入所要搜索的内容之后，搜索提示的最大数量
@@ -129,7 +121,7 @@ module.exports = {
     author: 'swtywang', //网站搭建者名称
     authorAvatar: '/avatar.jpg', //网站搭建者avatar，会显示在首页
     record: "swtywang 's blog", // 记录，可以记录网站访问量，这里暂时先写description
-    startYear: '2024', //底部网站运行开始时间
+    startYear: '2023', //底部网站运行开始时间
     codeTheme: 'tomorrow', //代码块中代码的样式，这里的主题选取自PrismJS中的prism-themes
     // 配置评论valine的appId和appKey, 我这边自定义配置写在Valine.vue中
     valineConfig: {},

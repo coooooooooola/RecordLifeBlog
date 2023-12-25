@@ -205,7 +205,7 @@ export default defineComponent({
 
 @media (min-width: $MQNarrow)
   .navLinksContainer
-    width: 30vw
+    width: 35vw
     // 注意，这里的hidden是必要的，保证能够滚动
     overflow: hidden
     // 这里设置hover:visible是为了.nav-item中的.dropdown-wrapper里的nav-dropdown能够显示

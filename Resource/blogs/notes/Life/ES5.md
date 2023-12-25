@@ -2,9 +2,9 @@
 title: ES5严格模式相关
 date: 2020-2-12
 tags:
- - ES5
+ - Lifetag
 categories:
- - ES5
+ - Life
 ---
 
 
