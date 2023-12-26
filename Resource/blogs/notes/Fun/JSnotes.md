@@ -805,7 +805,6 @@ n是函数调用次数，1是一个全局执行上下文对象
 * 在当前函数执行完毕后，将栈顶的对象移除（出栈）
 * 当所有的代码执行完之后，栈中只剩下window
 
-![image-20220304120906802](D:\Super_mumu\typora文档资料\JS高级.assets\image-20220304120906802.png)
 
 ![image-20220304121521915](https://s2.loli.net/2022/06/23/cQe5oaZzEUsJ1gw.png)
 

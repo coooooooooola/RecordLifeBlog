@@ -89,7 +89,7 @@ import {
   toRefs,
   reactive,
   computed,
-  onMounted
+  onMounted,
 } from 'vue-demi'
 import TagList from '@theme/components/TagList'
 import NoteAbstract from '@theme/components/NoteAbstract'
@@ -105,14 +105,14 @@ export default defineComponent({
     TagList,
     ModuleTransition,
     PersonalInfo,
-    RecoIcon
+    RecoIcon,
   },
   setup(props, ctx) {
     const instance = useInstance()
     console.log(instance)
     const state = reactive({
       recoShow: false,
-      heroHeight: 0
+      heroHeight: 0,
     })
 
     const recoShowModule = computed(
@@ -138,12 +138,12 @@ export default defineComponent({
               )
             ]
           )
-        : require('../../images/wait.jpg') //如果用户没有设置背景图，设置主题默认封面图
+        : require('@theme/public/wait.jpg') //如果用户没有设置背景图，设置主题默认封面图
 
       const initBgImageStyle = {
         textAlign: 'center',
         overflow: 'hidden',
-        background: `url(${url}) center/cover no-repeat `
+        background: `url(${url}) center/cover no-repeat `,
       }
       // 获取用户自定义的样式，优先更高
       const { bgImageStyle } = instance.$frontmatter
@@ -162,7 +162,7 @@ export default defineComponent({
     const anchorImageUrl = computed(() => {
       return instance.$themeConfig.anchorImage
         ? instance.$withBase(instance.$themeConfig.anchorImage)
-        : require('../../images/loading.gif') //如果用户没有设置，则显示默认动态图片
+        : require('@theme/public/loading.gif') //如果用户没有设置，则显示默认动态图片
     })
 
     onMounted(() => {
@@ -174,7 +174,7 @@ export default defineComponent({
         density: 0.3,
         // color: "rgba(255,255,255, .4)",
         color: 'random', //气泡随机颜色
-        clearOffset: 0.9
+        clearOffset: 0.9,
       })
     })
 
@@ -186,7 +186,7 @@ export default defineComponent({
       getOneColor,
       mottos,
       mottosStyle,
-      anchorImageUrl
+      anchorImageUrl,
     }
   },
   methods: {
@@ -197,8 +197,8 @@ export default defineComponent({
     },
     getPagesByTags(tagInfo) {
       this.$router.push({ path: tagInfo.path })
-    }
-  }
+    },
+  },
 })
 </script>
 

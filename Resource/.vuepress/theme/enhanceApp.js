@@ -5,14 +5,16 @@ import { interceptRouterError, fixRouterError404 } from '@theme/helpers/other'
 import { install } from 'vue-demi'
 import { addLinkToHead } from '@theme/helpers/utils'
 import { registerCodeThemeCss } from '@theme/helpers/other'
-
+import Element from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+//vuepress引入element-ui报错解决：https://blog.csdn.net/qq_32855007/article/details/108726430
 import ImgLazy from 'vuepress-plugin-img-lazy/ImgLazy'
 
 export default ({ Vue, siteData, isServer, router }) => {
   install(Vue)
   Vue.mixin(postMixin)
   Vue.mixin(localMixin)
-
+  Vue.use(Element);
   // 全局指令
   /*
   参考：https://www.jianshu.com/p/394c487d81d7

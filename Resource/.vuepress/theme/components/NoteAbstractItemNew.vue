@@ -11,7 +11,7 @@
             this.$themeConfig.covers[
               Math.floor(Math.random() * this.$themeConfig.covers.length)
             ] ||
-            '../images/lighthouse.webp'
+            '@theme/public/lighthouse.webp'
           "
           :alt="item.title"
       /></a>
@@ -45,7 +45,7 @@ import { RecoIcon } from '@vuepress-reco/core/lib/components'
 import PageInfo from './PageInfo'
 export default defineComponent({
   components: { PageInfo, RecoIcon },
-  props: ['item', 'currentPage', 'currentTag']
+  props: ['item', 'currentPage', 'currentTag'],
 })
 </script>
 
