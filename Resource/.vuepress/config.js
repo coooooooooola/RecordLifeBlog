@@ -110,7 +110,7 @@ module.exports = {
 
     // 其他部分
     type: 'blog', // 设置好网站首页，会显示HomeBlog.vue。如果注释掉，会显示Home.vue组件。
-    anchorImage: '/images/loading.gif', //触发下拉图片设置
+    anchorImage: '/loading.gif', //触发下拉图片设置
     logo: '/avatar.jpg', //导航栏左侧logo
     search: true, //顶部搜索栏，true表示开启搜索
     searchMaxSuggestions: 10, //输入所要搜索的内容之后，搜索提示的最大数量
