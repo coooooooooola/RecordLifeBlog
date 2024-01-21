@@ -8,13 +8,13 @@ module.exports = (options, ctx) => ({
     const isAlgoliaSearch =
       themeConfig.algolia ||
       Object.keys((siteConfig.locales && themeConfig.locales) || {}).some(
-        base => themeConfig.locales[base].algolia
+        (base) => themeConfig.locales[base].algolia
       )
     return {
       '@AlgoliaSearchBox': isAlgoliaSearch
         ? path.resolve(__dirname, 'components/AlgoliaSearchBox.vue')
         : path.resolve(__dirname, 'noopModule.js'),
-      '@SearchBox': path.resolve(__dirname, 'components/SearchBox.vue')
+      '@SearchBox': path.resolve(__dirname, 'components/SearchBox.vue'),
     }
   },
   // 主题预配置好的插件
@@ -27,8 +27,8 @@ module.exports = (options, ctx) => ({
     [
       '@vuepress/medium-zoom',
       {
-        selector: '.theme-reco-content :not(a) > img'
-      }
+        selector: '.theme-reco-content :not(a) > img',
+      },
     ],
     '@vuepress/plugin-nprogress',
     [
@@ -41,115 +41,122 @@ module.exports = (options, ctx) => ({
             keys: ['tags'],
             path: '/tag/',
             layout: 'Tags',
-            scopeLayout: 'Tag'
+            scopeLayout: 'Tag',
           },
           {
             id: 'categories',
             keys: ['categories'],
             path: '/categories/',
             layout: 'Categories',
-            scopeLayout: 'Category'
+            scopeLayout: 'Category',
           },
           {
             id: 'timeline',
             keys: ['timeline'],
             path: '/timeline/',
             layout: 'TimeLines',
-            scopeLayout: 'TimeLine'
+            scopeLayout: 'TimeLine',
           },
           {
             id: 'about',
             keys: ['about'],
             path: '/about/',
             layout: 'About',
-            scopeLayout: 'About'
+            scopeLayout: 'About',
           },
           {
             id: 'gallery',
             keys: ['gallery'],
             path: '/gallery/',
             layout: 'Gallery',
-            scopeLayout: 'Gallery'
+            scopeLayout: 'Gallery',
           },
           {
             id: 'gallerydetail',
             keys: ['galleryDetail'],
             path: '/galleryDetail/',
             layout: 'GalleryDetail',
-            scopeLayout: 'GalleryDetail'
+            scopeLayout: 'GalleryDetail',
           },
-                    {
+          {
             id: 'bookmark',
             keys: ['bookmark'],
             path: '/bookmark/',
             layout: 'BookMark',
-            scopeLayout: 'BookMark'
-          }
-        ]
-      }
+            scopeLayout: 'BookMark',
+          },
+          {
+            id: 'talk',
+            keys: ['talk'],
+            path: '/talk/',
+            layout: 'Talk',
+            scopeLayout: 'Talk',
+          },
+        ],
+      },
     ],
     'vuepress-plugin-smooth-scroll',
     [
       'container',
       {
         type: 'tip',
-        before: info =>
+        before: (info) =>
           `<div class="custom-block tip"><p class="title">${info}</p>`,
         after: '</div>',
-        defaultTitle: ''
-      }
+        defaultTitle: '',
+      },
     ],
     [
       'container',
       {
         type: 'warning',
-        before: info =>
+        before: (info) =>
           `<div class="custom-block warning"><p class="title">${info}</p>`,
         after: '</div>',
-        defaultTitle: ''
-      }
+        defaultTitle: '',
+      },
     ],
     [
       'container',
       {
         type: 'danger',
-        before: info =>
+        before: (info) =>
           `<div class="custom-block danger"><p class="title">${info}</p>`,
         after: '</div>',
-        defaultTitle: ''
-      }
+        defaultTitle: '',
+      },
     ],
     [
       'container',
       {
         type: 'right',
-        defaultTitle: ''
-      }
+        defaultTitle: '',
+      },
     ],
     [
       'container',
       {
         type: 'theorem',
-        before: info =>
+        before: (info) =>
           `<div class="custom-block theorem"><p class="title">${info}</p>`,
         after: '</div>',
-        defaultTitle: ''
-      }
+        defaultTitle: '',
+      },
     ],
     [
       'container',
       {
         type: 'details',
-        before: info =>
+        before: (info) =>
           `<details class="custom-block details">${
             info ? `<summary>${info}</summary>` : ''
           }\n`,
         after: () => '</details>\n',
         defaultTitle: {
           '/': 'See More',
-          '/zh/': '更多'
-        }
-      }
-    ]
-  ]
+          '/zh/': '更多',
+        },
+      },
+    ],
+  ],
 })

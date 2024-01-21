@@ -40,7 +40,7 @@
                 <span
                   style="background-color: rgb(31, 157, 163); display: inline"
                   >性格</span
-                >：ISTJ（有点儿准），还有一点儿内向+社恐，只和很熟悉的人话比较多，很不喜欢无效社交，享受独处时光
+                >：ISTJ（有点儿准），有些内向+社恐，只和很熟悉的人话比较多，很不喜欢无效社交，享受独处时光
               </span>
               <h2 style="border-left: solid 3px yellow; padding-left: 10px">
                 建站
@@ -100,6 +100,12 @@
                   >书签</span
                 >：存放有用的、有意思的网址
               </span>
+              <h2 style="border-left: solid 3px yellow; padding-left: 10px">
+                部署
+              </h2>
+              <span style="padding-left: 5px">
+                前端vue工程、Nginx、图床服务以及其他静态资源均部署在家中的NAS私有云，已支持内网穿透，不过加载速度可能会稍微慢些
+              </span>
 
               <h2 style="border-left: solid 3px yellow; padding-left: 10px">
                 未来的功能
@@ -108,7 +114,7 @@
                 <span
                   style="background-color: rgb(31, 157, 163); display: inline"
                   >说说</span
-                >：类似一条朋友圈，简短表达心情
+                >：【已上线】类似一条朋友圈，简短表达心情
               </span>
               <span style="padding-left: 5px">
                 <span

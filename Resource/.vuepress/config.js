@@ -78,6 +78,11 @@ module.exports = {
         icon: 'reco-account',
         link: '/about/',
       },
+      {
+        text: 'Talk',
+        icon: 'reco-account',
+        link: '/talk/',
+      },
     ],
     // 右侧侧边栏全局开启
     subSidebar: 'auto', //在所有页面中启用自动生成子侧边栏，原 sidebar 仍然兼容
