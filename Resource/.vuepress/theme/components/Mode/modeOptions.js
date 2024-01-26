@@ -11,7 +11,7 @@ const modeOptions = {
     '--default-color-3': 'rgba(0, 0, 0, .3)',
     '--default-color-2': 'rgba(0, 0, 0, .2)',
     '--default-color-1': 'rgba(0, 0, 0, .1)',
-    '--background-color': '#0c081a',
+    '--background-color': '#111',
     '--box-shadow': '0 1px 8px 0 rgba(0, 0, 0, .6)',
     '--box-shadow-hover': '0 2px 16px 0 #f400b3',
     '--text-color': '#ffffff',

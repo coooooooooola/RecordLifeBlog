@@ -3,10 +3,8 @@
     <ModuleTransition>
       <div>
         <div class="header">
-          <h1 class="fzzj" style="margin: 0 auto">
-            {{ '微博 Blogs' }}
-          </h1>
-          <!-- <p class="header-subtitle">
+          <h1 class="header-title">朋友圈</h1>
+          <p class="header-subtitle">
             我有4个朋友：热爱吃喝玩乐的<span style="text-decoration: underline"
               >逍遥子</span
             >、日常打抱不平的<span style="text-decoration: underline"
@@ -16,22 +14,21 @@
             >以及没有什么存在感的<span style="text-decoration: underline"
               >小透明</span
             >
-          </p> -->
+          </p>
         </div>
-
         <div class="tab-pane">
           <div class="streamline">
-            <!-- <ol> -->
-            <div
-              class="record"
-              v-for="(item, index) in recordList"
-              :key="index"
-            >
-              <div class="container">
-                <div class="record-header">
-                  <a class="record-avatar">
-                    <img :src="item.friendInfo.avatar" />
-                  </a>
+            <ol>
+              <div
+                class="record"
+                v-for="(item, index) in recordList"
+                :key="index"
+              >
+                <a class="record-avatar">
+                  <img :src="item.friendInfo.avatar" />
+                </a>
+
+                <div class="record-content">
                   <div class="record-content-heading">
                     <a href="https://www.ibyte.me">{{
                       item.friendInfo.name
@@ -39,13 +36,7 @@
                     <span class="record-publish-time"
                       >{{ item.createTime }}
                     </span>
-                    <span class="text-muted">
-                      <span> from </span>
-                      {{ item.location.first }}⋅{{ item.location.second }}
-                    </span>
                   </div>
-                </div>
-                <div class="record-content">
                   <div class="record-content-body">
                     <p style="word-wrap: break-word">{{ item.content.text }}</p>
                     <div class="record-pic">
@@ -63,10 +54,30 @@
                       </a>
                     </div>
                   </div>
+                  <div class="record-content-footer say_footer">
+                    <span class="text-muted">
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16px"
+                          height="16px"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                      </span>
+                      {{ item.location.first }}⋅{{ item.location.second }}
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- </ol> -->
+            </ol>
           </div>
         </div>
       </div>
@@ -83,26 +94,16 @@ import { RecoIcon } from '@vuepress-reco/core/lib/components'
 export default defineComponent({
   data() {
     return {
-      // 设置封面格言样式，并暴露出去给config.js来让用户设置
-      mottosStyle: '',
       recordList: [
         {
           friendInfo: {
             name: '小透明',
             avatar: 'https://www.ibyte.me/avatar/85.png',
           },
-          createTime: '2023-12-30 18:04',
+          createTime: '2023年12月30日',
           content: {
             text: '终于赶在2024年之前完成了博客的首次上线✌️，先把过去的点滴迁移过来，然后就开始记录新生活～',
             picList: [
-              'http://image.swtywang.top/uploads/small/6b6b1e8c07e00998ac41a40c18f9d624.png',
-              'http://image.swtywang.top/uploads/small/6b6b1e8c07e00998ac41a40c18f9d624.png',
-              'http://image.swtywang.top/uploads/small/6b6b1e8c07e00998ac41a40c18f9d624.png',
-              'http://image.swtywang.top/uploads/small/6b6b1e8c07e00998ac41a40c18f9d624.png',
-              'http://image.swtywang.top/uploads/small/6b6b1e8c07e00998ac41a40c18f9d624.png',
-              'http://image.swtywang.top/uploads/small/6b6b1e8c07e00998ac41a40c18f9d624.png',
-              'http://image.swtywang.top/uploads/small/6b6b1e8c07e00998ac41a40c18f9d624.png',
-              'http://image.swtywang.top/uploads/small/6b6b1e8c07e00998ac41a40c18f9d624.png',
               'http://image.swtywang.top/uploads/small/6b6b1e8c07e00998ac41a40c18f9d624.png',
             ],
           },
@@ -172,7 +173,7 @@ export default defineComponent({
             second: 'Chaoyang',
           },
         },
-        {
+                {
           friendInfo: {
             name: '逍遥子',
             avatar: 'https://www.ibyte.me/avatar/81.png',
@@ -206,7 +207,7 @@ export default defineComponent({
 /** 上方header块 */
 .header {
   text-align: center;
-  margin: 50px auto;
+  margin: 100px auto;
 }
 .header .header-title {
   font-size: 2rem;
@@ -216,36 +217,28 @@ export default defineComponent({
 .header .header-subtitle {
   font-size: 1rem;
 }
-.record-header {
-  display: flex;
-}
+
 .talk-wrapper {
   padding: 100px 0 0px;
   max-width: 1000px;
   margin: 0 auto !important;
 }
-.container {
-  padding: 16px;
-}
+
 .tab-pane {
-  /* padding-right: 15px; */
-  /* padding-left: 15px; */
-  width: 642px;
-  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
   opacity: 1;
   -webkit-transition: opacity 0.15s linear;
   -o-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
 }
 .streamline {
-  /* border-left: 1px solid #dee5e7; */
+  border-left: 1px solid #dee5e7;
   position: relative;
 }
 
 .record {
-  background: #212121;
-  padding: 2.5px 0;
-  margin-bottom: 8px;
+  padding: 15px 0;
 }
 
 .record a {
@@ -253,14 +246,15 @@ export default defineComponent({
 }
 .record-avatar {
   display: inline-block;
-  width: 35px;
+  width: 40px;
   height: auto;
-  /* float: left !important; */
-  /* margin-left: -20px; */
+  float: left !important;
+  margin-left: -20px;
 }
 .record-avatar img {
-  width: 3.25rem !important;
-  height: 3.25rem;
+  width: 100%;
+  width: 40px !important;
+  height: 40px;
   border-radius: 100%;
 }
 
@@ -268,38 +262,33 @@ ol {
   padding-left: 0em;
 }
 .record-content {
+  background: #212121;
   transition: all 0.2s ease;
-  padding-left: 60px;
-  /* margin-left: 30px; */
+  margin-left: 30px;
 }
 
 /** 内容第一行：作者 + 日期 start */
 .record-content-heading {
   cursor: pointer;
+  padding: 0px 15px;
   border-bottom: 1px solid #191919;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  margin-left: 10px;
-  padding-left: 20px;
-  padding-top: 5px;
 }
 .record-content-heading a {
-  color: #fff;
-  display: block;
-  font-size: 15px;
-  border-radius: 100%;
+  color: #777;
 }
-
 .record-content-heading span {
-  color: #797979;
-  margin-top: 3px;
-  font-size: 13px;
+  color: #777;
 }
-
+.record-publish-time {
+  float: right !important;
+}
 /** 内容第一行：作者 + 日期 start  */
 /** 第二行 */
 .record-content-body {
-  color: #bfbfbf;
+  padding: 0 50px;
+  color: #777;
   margin: 0px;
   padding-bottom: 10px;
   white-space: pre-line;
